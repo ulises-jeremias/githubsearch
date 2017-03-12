@@ -1,0 +1,32 @@
+{
+  "name": "githubsearch",
+  "version": "0.1.0",
+  "description": ":v",
+  "main": "app.js",
+  "author": "ulises-jeremias",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/ulises-jeremias/githubsearch"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "electron": "^1.6.2",
+    "electron-installer-dmg": "^0.2.0",
+    "electron-packager": "^8.5.1",
+    "es6-shim": "^0.35.3",
+    "file-system": "^2.2.2",
+    "jquery": "^3.1.1",
+    "mdbootstrap": "^4.3.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.2.0",
+    "zone.js": "^0.8.0"
+  },
+  "scripts": {
+    "start": "electron app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package-mac": "electron-packager . githubsearch --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . githubsearch --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux": "electron-packager . githubsearch --overwrite --platform=linux --arch=x64 --prune=true --out=release-builds"
+  }
+}
